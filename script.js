@@ -1,8 +1,14 @@
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
 
+
+// var reverbMix = document.getElementById("reverbMix");
+
 playButton.addEventListener("click", play, false);
 pauseButton.addEventListener("click", pause, false);
+
+
+// reverbMix.addEventListener("input", setReverb, false);
 
 var reverb = new Pizzicato.Effects.Reverb({
     volume: 0.6,
@@ -41,8 +47,8 @@ function play(){
     }, function() {
         console.log('sound file loaded!');
         targetFile.addEffect(reverb);
-        //targetFile.addEffect(lowPassFilter);
-        targetFile.addEffect(dubDelay);
+        targetFile.addEffect(lowPassFilter);
+        // targetFile.addEffect(dubDelay);
         //targetFile.addEffect(flanger);
         targetFile.play();
     });

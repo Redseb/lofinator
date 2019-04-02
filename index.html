@@ -2,13 +2,32 @@
 <html>
     <head>
         <title>lofiNATOR 3000</title>
+        <link rel="stylesheet" href="index.css">
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js"></script>-->
         <!--<script src="./Pizzicato.js"></script>-->
         <script src="node_modules/pizzicato/distr/Pizzicato.js"></script>
     </head>
     <body>
-        <button id = "play">play</button>
-        <button id ="pause">pause</button>
+        <div id ="main">
+            <div id ="buttons">
+                <div>
+                    <h2>Reverb:</h2>
+
+                    <h3>Volume:</h3>
+                    <input type="range" min="1" max="100" value="50" id="reverbVolume">
+                    <h3>Time:</h3>
+                    <input type="range" min="1" max="100" value="50" id="reverbTime">
+                    <h3>Decay:</h3>
+                    <input type="range" min="1" max="100" value="50" id="reverbDecay">
+                    <h3>Mix:</h3>
+                    <input type="range" min="1" max="100" value="50" id="reverbMix">
+                </div>
+                <div>
+                    <button id = "play">play</button>
+                    <button id ="pause">pause</button>
+                </div>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
