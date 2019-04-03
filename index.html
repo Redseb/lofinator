@@ -12,15 +12,20 @@
             <div id ="buttons">
                 <div>
                     <h2>Reverb:</h2>
-
-                    <h3>Volume:</h3>
-                    <input type="range" min="1" max="100" value="50" id="reverbVolume">
                     <h3>Time:</h3>
-                    <input type="range" min="1" max="100" value="50" id="reverbTime">
+                    <input type="range" min="0" max="10" value="3" class="reverb" id="reverbTime">
                     <h3>Decay:</h3>
-                    <input type="range" min="1" max="100" value="50" id="reverbDecay">
+                    <input type="range" min="0" max="10" value="3" class ="reverb" id="reverbDecay">
                     <h3>Mix:</h3>
-                    <input type="range" min="1" max="100" value="50" id="reverbMix">
+                    <input type="range" min="0" max="100" value="60" class = "reverb" id="reverbMix">
+                </div>
+
+                <div>
+                    <h2>Low Pass Filter</h2>
+                    <h3>Frequency:</h3>
+                    <input type="range" min="0" max="5000" value="1" class="lowPass" id="lowPassFrequency">
+                    <h3>Peak:</h3>
+                    <input type="range" min="0" max="50" value="10" class="lowPass" id="lowPassPeak">
                 </div>
                 <div>
                     <button id = "play">play</button>
