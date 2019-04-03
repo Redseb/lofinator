@@ -56,7 +56,7 @@ function setLowPass(){ //Called when any reverb slider is moved
     console.log("LowPass Set");
     lowPassFilter.frequency = lowPassFrequency.value/1;
     console.log("lowPassFrequency.value: " + lowPassFrequency.value + " lowPassFilter.frequency: " + lowPassFilter.frequency);
-    lowPassFilter.peak = lowPassPeak.value;
+    lowPassFilter.peak = lowPassPeak.value/1;
 }
 
 
