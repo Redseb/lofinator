@@ -1,5 +1,9 @@
+document.body.onload = randomBG();
+
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
+var filePath = "music/test.mp3";
+var targetFile;
 
 var reverbTime = document.getElementById("reverbTime");
 var reverbDecay = document.getElementById("reverbDecay");
@@ -12,6 +16,38 @@ var lowPassPeak = document.getElementById("lowPassPeak");
 
 var lowPassSliders = document.getElementsByClassName("lowPass");
 
+var samples = document.getElementsByClassName("sample");
+
+for(var i = 0; i < samples.length; i++){
+    samples[i].addEventListener("click", setFilePath, false);
+}
+
+/* 
+    setFilePath() is a function responsible for changing the value of the 
+    filePath variable to whicever radio box is checked
+*/
+function setFilePath(){
+    for(var i = 0; i < samples.length; i++){
+        if(samples[i].checked){
+            filePath = samples[i].value;
+        }
+    }
+    setReverb();
+    setLowPass();
+}
+
+/*
+    randomBG() is responsible for setting the body's background-image css 
+    property to a random url of a locally stored image.
+
+    randomBG() is called once when the body is loaded
+
+    Images can be found as images/lofiBG[i].gif, where i is the index
+*/
+function randomBG(){
+    var bg = 'images/lofiBG' + Math.floor(Math.random() * Math.floor(4) + 1) + '.gif';
+    document.body.style.backgroundImage='url('+bg+')';
+}
 
 playButton.addEventListener("click", play, false);
 pauseButton.addEventListener("click", pause, false);
@@ -59,20 +95,22 @@ function setLowPass(){ //Called when any reverb slider is moved
     lowPassFilter.peak = lowPassPeak.value/1;
 }
 
-
+/* 
+    play() is a function responsible for creating the sound object (Pizzicato)
+    adding the effects, and playing the object
+*/
 function play(){
     playButton.innerHTML = "play pressed";
 
     var targetFile = new Pizzicato.Sound({ 
         source: 'file',
-        options: { path: 'music/test.mp3' }
+        options: { path: filePath, loop: true }
     }, function() {
         console.log('sound file loaded!');
         targetFile.addEffect(lowPassFilter);
         targetFile.addEffect(reverb);
         targetFile.play();
     });
-    
 }
 
 function pause(){

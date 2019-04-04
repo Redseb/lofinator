@@ -1,9 +1,12 @@
 body {
-    background-image: url('images/cherryBlossoms.gif');
+    /* background-image: url('images/cherryBlossoms.gif'); */
+    /* background-image: url('https://media.giphy.com/media/1yTcuT8dXngxKAH7QC/giphy.gif'); */
+    /* background-image: url('https://thumbs.gfycat.com/FrigidShinyGermanspitz-small.gif'); */
+    /* background-image: url('https://thumbs.gfycat.com/BreakableSerpentineCommongonolek-small.gif') */
 }
 
 #main{
-    height: 90vh;
+    height: 100vh;
     width: 75vw;
     margin-left: 12.5vw;
     margin-top: 5vh;
@@ -12,7 +15,7 @@ body {
 }
 
 #buttons{
-    height: 90vh;
+    height: 100vh;
     width: 70vw;
     margin: auto;
     background-color: whitesmoke;
