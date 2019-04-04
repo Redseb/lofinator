@@ -6,7 +6,7 @@ body {
 }
 
 #main{
-    height: 100vh;
+    height: 110vh;
     width: 75vw;
     margin-left: 12.5vw;
     margin-top: 5vh;
@@ -15,9 +15,10 @@ body {
 }
 
 #buttons{
-    height: 100vh;
+    height: 110vh;
     width: 70vw;
     margin: auto;
+    margin-bottom: 5vh;
     background-color: whitesmoke;
 }
 
@@ -29,5 +30,5 @@ body {
 }
 
 h2, h3, input, button{
-    margin-left: 5vh;
+    margin-left: 5vw;
 }

@@ -2,6 +2,7 @@ document.body.onload = randomBG();
 
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
+var bgButton = document.getElementById("bgButton");
 var filePath = "music/test.mp3";
 var targetFile;
 
@@ -51,6 +52,7 @@ function randomBG(){
 
 playButton.addEventListener("click", play, false);
 pauseButton.addEventListener("click", pause, false);
+bgButton.addEventListener("click", randomBG, false);
 
 
 for(var i = 0; i < reverbSliders.length; i++){
@@ -99,21 +101,17 @@ function setLowPass(){ //Called when any reverb slider is moved
     play() is a function responsible for creating the sound object (Pizzicato)
     adding the effects, and playing the object
 */
-function play(){
-    playButton.innerHTML = "play pressed";
-
-    var targetFile = new Pizzicato.Sound({ 
+function play(isPaused){
+    targetFile = new Pizzicato.Sound({ 
         source: 'file',
         options: { path: filePath, loop: true }
     }, function() {
-        console.log('sound file loaded!');
         targetFile.addEffect(lowPassFilter);
         targetFile.addEffect(reverb);
         targetFile.play();
     });
 }
 
-function pause(){
-    pauseButton.innerHTML = "pause pressed lol";
+function pause(isPaused){
     targetFile.pause();
 }

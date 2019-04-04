@@ -3,40 +3,40 @@
     <head>
         <title>lofiNATOR 3000</title>
         <link rel="stylesheet" href="index.css">
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js"></script>-->
-        <!--<script src="./Pizzicato.js"></script>-->
         <script src="node_modules/pizzicato/distr/Pizzicato.js"></script>
+        <meta charset="UTF-8"> <!--Required character set for the Lofi japanese font-->
     </head>
     <body>
         <div id ="main">
             <div id ="buttons">
                 <div>
-                    <h2>Sample: </h2>
-                    <input type = "radio" name="sample" value = "music/lofi1.wav" class="sample"><a href="https://www.looperman.com/loops/detail/159641/sick-lofi-beats-167bpm-lo-fi-drum-loop">Sick Lofi Beats By: Lofy21</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi2.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/159089/lofi-rnb-chords-120bpm-rnb-piano-loop">Lofi Rnb Cords By: 4DT</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi3.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158860/chill-lofi-melody-145bpm-lo-fi-rhodes-piano-loop">Chill Lofi Melody By: hxllxw</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi4.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158356/lofi-vinyl-rhodes-piano-loop-2-118bpm-lo-fi-rhodes-piano-loop">Lofi Vinyl Rhodes Piano Loop 2 By: SyrachaSauce</a><br>
+                    <h2>ｓａｍｐｌｅ　英ぞ゙</h2>
+                    <input type = "radio" name="sample" value = "music/lofi1.wav" class="sample"><a href="https://www.looperman.com/loops/detail/159641/sick-lofi-beats-167bpm-lo-fi-drum-loop">Ｓｉｃｋ　Ｌｏｆｉ　Ｂｅａｔｓ　Ｂｙ：　Ｌｏｆｙ２１</a><br>
+                    <input type = "radio" name="sample" value = "music/lofi2.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/159089/lofi-rnb-chords-120bpm-rnb-piano-loop">Ｌｏｆｉ　Ｒｎｂ　Ｃｏｒｄｓ　Ｂｙ：　４ＤＴ</a><br>
+                    <input type = "radio" name="sample" value = "music/lofi3.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158860/chill-lofi-melody-145bpm-lo-fi-rhodes-piano-loop">Ｃｈｉｌｌ　Ｌｏｆｉ　Ｍｅｌｏｄｙ　Ｂｙ：　ｈｘｌｌｘｗ</a><br>
+                    <input type = "radio" name="sample" value = "music/lofi4.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158356/lofi-vinyl-rhodes-piano-loop-2-118bpm-lo-fi-rhodes-piano-loop">Ｌｏｆｉ　Ｖｉｎｙｌ　Ｒｈｏｄｅｓ　Ｐｉａｎｏ　Ｌｏｏｐ　２　Ｂｙ：　ＳｙｒａｃｈａＳａｕｃｅ</a><br>
                 </div>
                 <div>
-                    <h2>Reverb:</h2>
-                    <h3>Time:</h3>
+                    <h2>ｒｅｖｅｒｂ 曖のこ</h2>
+                    <h3>ｔｉｍｅ　ぺ閲゜</h3>
                     <input type="range" min="0" max="10" value="3" class="reverb" id="reverbTime">
-                    <h3>Decay:</h3>
+                    <h3>ｄｅｃａｙ　カ苛遠</h3>
                     <input type="range" min="0" max="10" value="3" class ="reverb" id="reverbDecay">
-                    <h3>Mix:</h3>
+                    <h3>ｍｉｘ　閲カヰ</h3>
                     <input type="range" min="0" max="100" value="60" class = "reverb" id="reverbMix">
                 </div>
 
                 <div>
-                    <h2>Low Pass Filter</h2>
-                    <h3>Frequency:</h3>
+                    <h2>ｌｏｗ　ｐａｓｓ　ｆｉｌｔｅｒ　旺音フ</h2>
+                    <h3>ｆｒｅｑｕｅｎｃｙ　しヮ価</h3>
                     <input type="range" min="0" max="5000" value="1" class="lowPass" id="lowPassFrequency">
-                    <h3>Peak:</h3>
+                    <h3>ｐｅａｋ　ゴや畏</h3>
                     <input type="range" min="0" max="50" value="10" class="lowPass" id="lowPassPeak">
                 </div>
                 <div>
-                    <button id = "play">play</button>
-                    <button id ="pause">pause</button>
+                    <button id = "play">ｐｌａｙ　フヂッ</button>
+                    <button id ="pause">ｐａｕｓｅ　゙゠挨</button>
+                    <button id = "bgButton">ｒａｎｄｏｍ　ｂａｃｋｇｒｏｕｎｄ</button>
                 </div>
             </div>
         </div>
