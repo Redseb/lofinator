@@ -1,13 +1,13 @@
-#main{
+#main {
     height: 110vh;
     width: 75vw;
     margin-left: 12.5vw;
     margin-top: 5vh;
-    background-color:rgba(216, 112, 147, 0.7); 
+    background-color: rgba(216, 112, 147, 0.7);
     padding: 2.5vw;
 }
 
-#buttons{
+#buttons {
     height: 110vh;
     width: 70vw;
     margin: auto;
@@ -15,12 +15,44 @@
     background-color: whitesmoke;
 }
 
-#play, #pause, #bgButton{
+#play, #pause, #bgButton {
     padding: 5px;
     border: 2px solid black;
     background-color: rgb(216, 112, 147);
 }
 
-h2, h3, input, button{
+h2, h3, input, button {
     margin-left: 5vw;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    /* border-radius: 5px;    */
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 11px;
+    /* border-radius: 50%;  */
+    background: rgb(216, 112, 147);
+    cursor: pointer;
+    border: 2px solid black;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 11px;
+    /* border-radius: 50%; */
+    background: rgb(216, 112, 147);
+    cursor: pointer;
+    border: 2px solid black;
 }
