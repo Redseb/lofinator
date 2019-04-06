@@ -11,6 +11,6 @@ bgButton.addEventListener("click", randomBG, false);
     Images can be found as images/lofiBG[i].gif, where i is the index
 */
 function randomBG() {
-    var bg = 'images/lofiBG' + Math.floor(Math.random() * Math.floor(4) + 1) + '.gif';
+    var bg = 'images/lofiBG' + Math.floor(Math.random() * Math.floor(9) + 1) + '.gif';
     document.body.style.backgroundImage = 'url(' + bg + ')';
 }

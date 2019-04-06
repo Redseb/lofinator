@@ -11,17 +11,19 @@ pauseButton.addEventListener("click", pause, false);
     play() is a function responsible for creating the sound object (Pizzicato)
     adding the effects, and playing the object
 */
-function play(isPaused){
-    targetFile = new Pizzicato.Sound({ 
+function play(isPaused) {
+
+    targetFile = new Pizzicato.Sound({
         source: 'file',
         options: { path: filePath, loop: true }
-    }, function() {
+    }, function () {
         targetFile.addEffect(lowPassFilter);
         targetFile.addEffect(reverb);
         targetFile.play();
+        targetFile.setPlaybackRate();
     });
 }
 
-function pause(isPaused){
-    targetFile.pause();
+function pause() {
+    targetFile.stop();
 }

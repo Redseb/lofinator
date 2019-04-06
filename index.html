@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>lofiNATOR 3000</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="node_modules/pizzicato/distr/Pizzicato.js"></script>
-        <meta charset="UTF-8"> <!--Required character set for the Lofi japanese font-->
-    </head>
-    <body>
-        <div id ="main">
-            <div id ="buttons">
-                <div>
-                    <h2>ｓａｍｐｌｅ　英ぞ゙</h2>
-                    <input type = "radio" name="sample" value = "music/lofi1.wav" class="sample"><a href="https://www.looperman.com/loops/detail/159641/sick-lofi-beats-167bpm-lo-fi-drum-loop">Ｓｉｃｋ　Ｌｏｆｉ　Ｂｅａｔｓ　Ｂｙ：　Ｌｏｆｙ２１</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi2.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/159089/lofi-rnb-chords-120bpm-rnb-piano-loop">Ｌｏｆｉ　Ｒｎｂ　Ｃｏｒｄｓ　Ｂｙ：　４ＤＴ</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi3.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158860/chill-lofi-melody-145bpm-lo-fi-rhodes-piano-loop">Ｃｈｉｌｌ　Ｌｏｆｉ　Ｍｅｌｏｄｙ　Ｂｙ：　ｈｘｌｌｘｗ</a><br>
-                    <input type = "radio" name="sample" value = "music/lofi4.wav" class="sample"><a href = "https://www.looperman.com/loops/detail/158356/lofi-vinyl-rhodes-piano-loop-2-118bpm-lo-fi-rhodes-piano-loop">Ｌｏｆｉ　Ｖｉｎｙｌ　Ｒｈｏｄｅｓ　Ｐｉａｎｏ　Ｌｏｏｐ　２　Ｂｙ：　ＳｙｒａｃｈａＳａｕｃｅ</a><br>
-                </div>
-                <div>
-                    <h2>ｒｅｖｅｒｂ 曖のこ</h2>
-                    <h3>ｔｉｍｅ　ぺ閲゜</h3>
-                    <input type="range" min="0" max="10" value="3" class="reverb slider" id="reverbTime">
-                    <h3>ｄｅｃａｙ　カ苛遠</h3>
-                    <input type="range" min="0" max="10" value="3" class ="reverb slider" id="reverbDecay">
-                    <h3>ｍｉｘ　閲カヰ</h3>
-                    <input type="range" min="0" max="100" value="60" class = "reverb slider" id="reverbMix">
-                </div>
 
-                <div>
-                    <h2>ｌｏｗ　ｐａｓｓ　ｆｉｌｔｅｒ　旺音フ</h2>
-                    <h3>ｆｒｅｑｕｅｎｃｙ　しヮ価</h3>
-                    <input type="range" min="0" max="5000" value="1" class="lowPass slider" id="lowPassFrequency">
-                    <h3>ｐｅａｋ　ゴや畏</h3>
-                    <input type="range" min="0" max="50" value="10" class="lowPass slider" id="lowPassPeak">
-                </div>
-                <div>
-                    <button id = "play">ｐｌａｙ　フヂッ</button>
-                    <button id ="pause">ｐａｕｓｅ　゙゠挨</button>
-                    <br><br>
-                    <button id = "bgButton">ｒａｎｄｏｍ　ｂａｃｋｇｒｏｕｎｄ　コセみ</button>
-                </div>
+<head>
+    <title>lofiNATOR 3000</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/pizzicato/distr/Pizzicato.js"></script>
+    <meta charset="UTF-8">
+    <!--Required character set for the Lofi japanese font-->
+</head>
+
+<body>
+    <div id="main">
+        <div id="buttons">
+            <div>
+                <h2>ｓａｍｐｌｅ　英ぞ゙</h2>
+                <input type="radio" name="sample" value="music/lofi1.wav" class="sample"><a
+                    href="https://www.looperman.com/loops/detail/159641/sick-lofi-beats-167bpm-lo-fi-drum-loop">Ｓｉｃｋ　Ｌｏｆｉ　Ｂｅａｔｓ　Ｂｙ：　Ｌｏｆｙ２１</a><br>
+                <input type="radio" name="sample" value="music/lofi2.wav" class="sample"><a
+                    href="https://www.looperman.com/loops/detail/159089/lofi-rnb-chords-120bpm-rnb-piano-loop">Ｌｏｆｉ　Ｒｎｂ　Ｃｏｒｄｓ　Ｂｙ：　４ＤＴ</a><br>
+                <input type="radio" name="sample" value="music/lofi3.wav" class="sample"><a
+                    href="https://www.looperman.com/loops/detail/158860/chill-lofi-melody-145bpm-lo-fi-rhodes-piano-loop">Ｃｈｉｌｌ　Ｌｏｆｉ　Ｍｅｌｏｄｙ　Ｂｙ：　ｈｘｌｌｘｗ</a><br>
+                <input type="radio" name="sample" value="music/lofi4.wav" class="sample"><a
+                    href="https://www.looperman.com/loops/detail/158356/lofi-vinyl-rhodes-piano-loop-2-118bpm-lo-fi-rhodes-piano-loop">Ｌｏｆｉ　Ｖｉｎｙｌ　Ｒｈｏｄｅｓ　Ｐｉａｎｏ　Ｌｏｏｐ　２　Ｂｙ：　ＳｙｒａｃｈａＳａｕｃｅ</a><br>
+            </div>
+            <div>
+                <h2>ｍａｓｔｅｒ　ｖｏｌｕｍｅ　スコ・</h2>
+                <input type="range" min="0" max="1" step="0.01" value = "1" class="volume slider" id="volume">
+            </div>
+            <div>
+                <h2>ｐｌａｙｂａｃｋ　ｒａｔｅ　ャよ乙</h2>
+                <input type="range" min="0" max="2" step="0.01" value = "1" class="playbackRate slider" id="playbackRate">
+            </div>
+            <div>
+                <h2>ｒｅｖｅｒｂ 曖のこ</h2>
+                <h3>ｔｉｍｅ　ぺ閲゜</h3>
+                <input type="range" min="0" max="10" value="3" class="reverb slider" id="reverbTime">
+                <h3>ｄｅｃａｙ　カ苛遠</h3>
+                <input type="range" min="0" max="10" value="3" class="reverb slider" id="reverbDecay">
+                <h3>ｍｉｘ　閲カヰ</h3>
+                <input type="range" min="0" max="100" value="60" class="reverb slider" id="reverbMix">
+            </div>
+
+            <div>
+                <h2>ｌｏｗ　ｐａｓｓ　ｆｉｌｔｅｒ　旺音フ</h2>
+                <h3>ｆｒｅｑｕｅｎｃｙ　しヮ価</h3>
+                <input type="range" min="0" max="5000" value="1" class="lowPass slider" id="lowPassFrequency">
+                <h3>ｐｅａｋ　ゴや畏</h3>
+                <input type="range" min="0" max="50" value="10" class="lowPass slider" id="lowPassPeak">
+            </div>
+            <div>
+                <button id="play">ｐｌａｙ　フヂッ</button>
+                <button id="pause">ｐａｕｓｅ　゙゠挨</button>
+                <br><br>
+                <button id="bgButton">ｒａｎｄｏｍ　ｂａｃｋｇｒｏｕｎｄ　コセみ</button>
             </div>
         </div>
-        <script src="scripts/control_scheme.js"></script>
-        <script src="scripts/background.js"></script>
-        <script src="scripts/effects.js"></script>
-        <script src="scripts/samples.js"></script>
-    </body>
+    </div>
+    <img src="images/clippy.png" id = "help">
+    <script src="scripts/control_scheme.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/effects.js"></script>
+    <script src="scripts/samples.js"></script>
+</body>
+
 </html>

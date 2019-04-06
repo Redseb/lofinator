@@ -1,5 +1,5 @@
 #main {
-    height: 110vh;
+    height: 130vh;
     width: 75vw;
     margin-left: 12.5vw;
     margin-top: 5vh;
@@ -8,7 +8,7 @@
 }
 
 #buttons {
-    height: 110vh;
+    height: 130vh;
     width: 70vw;
     margin: auto;
     margin-bottom: 5vh;
@@ -19,6 +19,14 @@
     padding: 5px;
     border: 2px solid black;
     background-color: rgb(216, 112, 147);
+}
+
+#help{
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    height: 215px;
+    width: 100px;
 }
 
 h2, h3, input, button {
@@ -36,7 +44,7 @@ h2, h3, input, button {
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
-  
+
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -47,7 +55,7 @@ h2, h3, input, button {
     cursor: pointer;
     border: 2px solid black;
 }
-  
+
 .slider::-moz-range-thumb {
     width: 25px;
     height: 11px;
