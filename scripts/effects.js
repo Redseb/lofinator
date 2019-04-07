@@ -43,14 +43,14 @@ var lowPassFilter = new Pizzicato.Effects.LowPassFilter({
     setVolume() sets Pizzicato's master volume to the volume slider's
     value
 */
-function setVolume(){
-    Pizzicato.volume = volumeSlider.value/1;
+function setVolume() {
+    Pizzicato.volume = volumeSlider.value / 1;
 }
 /* 
     setPlaybackRate() sets the audio objects playbackrate (speed) to 
     the slider's value.
 */
-function setPlaybackRate(){
+function setPlaybackRate() {
     targetFile.sourceNode.playbackRate.value = playbackRate.value;
 }
 /* 

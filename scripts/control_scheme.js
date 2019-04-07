@@ -6,6 +6,9 @@ var targetFile;
 playButton.addEventListener("click", play, false);
 pauseButton.addEventListener("click", pause, false);
 
+input.onchange = function(e){ //File uploading
+    filePath = URL.createObjectURL(this.files[0]);
+}
 
 /* 
     play() is a function responsible for creating the sound object (Pizzicato)
