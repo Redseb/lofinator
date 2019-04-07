@@ -29,6 +29,14 @@
     width: 100px;
 }
 
+#helpText {
+    position: fixed;
+    bottom: 215px;
+    right: 5px;
+    height: 195px;
+    width: 230px;
+}
+
 h2, h3, input, button {
     margin-left: 5vw;
 }

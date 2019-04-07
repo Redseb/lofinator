@@ -6,7 +6,7 @@ var targetFile;
 playButton.addEventListener("click", play, false);
 pauseButton.addEventListener("click", pause, false);
 
-input.onchange = function(e){ //File uploading
+input.onchange = function (e) { //File uploading
     filePath = URL.createObjectURL(this.files[0]);
 }
 
@@ -29,4 +29,5 @@ function play(isPaused) {
 
 function pause() {
     targetFile.stop();
+    targetFile.disconnect();
 }
