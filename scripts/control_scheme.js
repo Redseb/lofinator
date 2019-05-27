@@ -1,6 +1,6 @@
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
-var filePath = "music/lofi1.wav";
+var filePath = "./music/lofi1.wav";
 var targetFile;
 
 playButton.addEventListener("click", play, false);
